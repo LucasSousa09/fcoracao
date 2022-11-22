@@ -1,5 +1,7 @@
 import Image from 'next/image'
+
 import mainImg from '../assets/farm_frances-gunn.jpg'
+import horsesImg from '../assets/horses-lucia-macedo.jpg'
 
 import { Header } from "../components/Header";
 
@@ -13,6 +15,16 @@ export default function Home() {
           Bem vindo à Fazenda Coração! 
         </p>
       </main>
+
+      <section className="relative h-[840px] bg-brown-400 py-[72px] px-12 flex gap-12">
+        <div className="before:content-[''] before:h-[6px] before:absolute before:top-12 before:right-12 before:left-12 before:bg-beige-100 before:rounded-[3px] text-4xl leading-[45px] text-beige-100 flex flex-col gap-12">
+          <p>A Fazenda coração, fundada 1675 pelo grande Heart Banner foi sempre conhecida como sinonimo de paz e alegria.</p>
+          <p>Com 347 anos de tradição o que era bom ficou ainda melhor! Sua culinária já característica nos lembra a íconica frase da música de Luiz Gonsaga: “Panela velha é que faz comida boa”.</p>
+          <p>Além disso, em seus mais de 1375 hectares podemos encontrar lindas paisagens, represas naturais e belos animais.</p>
+        </div>
+        <Image className="max-w-[566px] object-cover object-left rounded-lg" src={horsesImg} alt="2 Cavalos atrás de uma cerca" />
+      </section>
+
     </div>
   )
 }

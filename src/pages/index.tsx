@@ -1,9 +1,10 @@
 import Image from 'next/image'
 
+import { Header } from "../components/Header";
+import { Carousel } from '../components/Carousel'
+
 import mainImg from '../assets/farm_frances-gunn.jpg'
 import horsesImg from '../assets/horses-lucia-macedo.jpg'
-
-import { Header } from "../components/Header";
 
 export default function Home() {
   return (
@@ -23,6 +24,17 @@ export default function Home() {
           <p>Além disso, em seus mais de 1375 hectares podemos encontrar lindas paisagens, represas naturais e belos animais.</p>
         </div>
         <Image className="max-w-[566px] object-cover object-left rounded-lg" src={horsesImg} alt="2 Cavalos atrás de uma cerca" />
+      </section>
+
+      <section className="relative h-[840px] bg-beige-100 py-[72px] px-12 flex flex-col gap-6">
+        <div className="before:content-[''] before:h-[6px] before:absolute before:top-12 before:right-12 before:left-12 before:bg-brown-700 before:rounded-[3px] text-[32px] leading-[40px] text-brown-700 flex flex-col gap-4">
+          <p>Além de provar alimentos característicos da região, na fazenda coração, você faz muito mais.</p>
+          <p>Lindas trilhas para poder se achegar ainda mais à sua família.</p>
+          <p>Represas naturais para poder se refrescar nos momentos de calor.</p>
+          <p>Além de contato direto com os mansos animais do campo para momentos inesquecíveis</p>
+        </div>
+
+        <Carousel />
       </section>
 
     </div>
